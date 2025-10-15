@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class pallindromeORnot {
+    public static boolean ispallindrome( String s) {
+        s = s.replaceAll("\\s+","").toLowerCase();
+        int left = 0;
+        int right = s.length()-1;
+        while ( left < right){
+            if (s.charAt(left) != s.charAt(right)){
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        String str = sc.nextLine();
+        sc.close();
+
+      if(  ispallindrome(str)){
+        System.out.println("it is a pallindrome ");
+      }
+      else {
+        System.out.println("not a pallindrome ");
+      }
+        }
+}
+ 
